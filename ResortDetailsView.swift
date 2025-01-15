@@ -11,7 +11,7 @@ struct ResortDetailsView: View {
     
     let resort: Resort
     
-    var size: String { // определяем размер представляя его в виде слова а не цифры
+    var size: String { // определяем размер представляя его в виде слова а не цифры 
         switch resort.size {
         case 1: "Small"
         case 2: "Average"
