@@ -12,6 +12,7 @@ struct ContentView: View {
     let resorts: [Resort] = Bundle.main.decode("resorts.json") // путь к JSON Bundle
     
     @State private var searchText = ""
+    @State private var favorites = Favorites() // Избранное
     
     var filteredResorts: [Resort] {
         if searchText.isEmpty {
@@ -46,12 +47,22 @@ struct ContentView: View {
                                 .foregroundStyle(.secondary)
                         }
                     }
+                    
+                    if favorites.contains(resort) { // Отображаем сердечко если курорт в избранном
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                        .accessibilityLabel("This is a favorite resort")
+                            .foregroundStyle(.red)
+                    }
                 }
             }
             .navigationTitle("Resorts")
             .navigationDestination(for: Resort.self) { resort in
                 ResortView(resort: resort) // открываем экран детальный для каждого ресорта
             }
+            
+            .environment(favorites) // Передали их в обьект окружения что бы была возможность достучаться до избранных из любого представления которое связано с контент вью пр 19 12/12
+            
             .searchable(text: $searchText, prompt: " Search for a resort") // prompt - placeholder
         } detail: { //  SplitView / То что отображатеся пок не выбрана ниодна ссылка (при первом включении грубо говоря ;) )
             WelcomeView()
