@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bundle {
+extension Bundle { // generic
     func decode<T: Decodable>(_ file: String) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
