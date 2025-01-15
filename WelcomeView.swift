@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct WelcomeView: View {
+struct WelcomeView: View {// Начальная страница для SplitView
     var body: some View {
         VStack {
             Text("Welcome to SnowSeeker!")
