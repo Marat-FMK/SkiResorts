@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let resorts: [Resort] = Bundle.main.decode("resorts.json")
+    let resorts: [Resort] = Bundle.main.decode("resorts.json") // путь к JSON Bundle
     
     var body: some View {
         
