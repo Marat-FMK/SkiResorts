@@ -33,7 +33,7 @@ struct ResortView: View {
                         .font(.headline)
 
                     Text(resort.facilities, format: .list(type: .and))
-                        .padding(.vertical) // можете использовать .or для получения «A, B или C», если вам это нужно.
+                        .padding(.vertical) // можете использовать .or для получения «A, B или C», если вам это нужно. 
                 }
                 .padding(.horizontal)
             }
