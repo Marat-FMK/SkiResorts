@@ -12,7 +12,7 @@ class Favorites {
     // the actual resorts the user has favorited
     private var resorts: Set<String>
 
-    // the key we're using to read/write in UserDefaults
+    // the key we're using to read/write in UserDefaults 
     private let key = "Favorites"
 
     init() {
