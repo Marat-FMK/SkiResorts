@@ -48,7 +48,7 @@ struct ResortView: View {
                         ForEach(resort.facilityTypes) { facility in
                             Button {
                                 selectedFacility = facility // передаем название кнопке
-                                showingFacility = true // только потом вызываем алерт
+                                showingFacility = true // только потом вызываем алерт 
                             } label: {
                                 facility.icon // бурем из структуры иконку(представление)
                                     .font(.title)
