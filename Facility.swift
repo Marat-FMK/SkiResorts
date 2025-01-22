@@ -39,7 +39,7 @@ struct Facility: Identifiable {
     ]
     
     var description: String {
-        if let message = descriptions[name] { // Соответствует ли картинке дескрипшен , для алерта
+        if let message = descriptions[name] { // Соответствует  ли картинке дескрипшен , для алерта
             message
         } else {
             fatalError("Unknown facility type: \(name)")
